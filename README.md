@@ -37,10 +37,10 @@ The Last Model in our system,It has three fields (courier, saturday_date, wage).
 # WorkFlow
 # HOW TO UPDATE DAILYWAGE TABLE?
 Users only have access to make new "Income-Models"(which were Trip or WageIncrement or WageReduction). after they created one instance from one of these three 
-models, next step is to check if we have a related dailywage record or not, if we didn't have any dailywage record which had the same courier as our instance.courier and same date as our instance.date, we would create such a daily record with these properties and save it, and if we had a dailywage record which had the same courier as our instance.courier and same date as our instance.date, we update this instance.wage and save it. All three "Income-Models" have methods to perform this action after there were made a new instance from them.
+models, next step is to check if we have a related dailywage record or not, if we didn't have any dailywage record which had the same courier as our instance.courier and same date as our instance.date, we would create such a daily record with these properties and save it, and if we had a dailywage record which had the same courier as our instance.courier and same date as our instance.date, we update this instance.wage and save it. All three "Income-Models" have methods to perform this action after there was made a new instance from one of them.
 
-# HOW TO UPDATE WEEKYWAGE TABLE?
-Whenever we update DailyWage, we have to update the DailyWage table too, that is why there is a method inside DailyWage model and if after making a new DailyWge instance, we call it, it would check all the week changes in the same week as DailyWage new insatnce's week and updates WeeklyWage.
+# HOW TO UPDATE WEEKLYWAGE TABLE?
+Whenever we update DailyWage, we have to update the WeeklyWage table too, that is why there is a method inside DailyWage model and if after making a new DailyWge instance, we call it, it would check all the week changes in the same week as DailyWage new insatnce's week and updates WeeklyWage.
 
 # Saving_flow_manager(), Serializers, Viewsets and ......
 I would continue to make this documention more complete...
