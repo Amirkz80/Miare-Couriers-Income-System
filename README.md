@@ -31,4 +31,15 @@ the only table which would be affected by changes in this model is the WeeklyWag
 This constarint lies in two fileds of it, which are courier and date. in Other words we can not have two same rows in this table with same courier AND same date (This condition Would violate the logical and conceptual idea of ingerity of database) 
 
 # WeeklyWage Model
-The Last Model in our system,It has three fields (courier, Saturday_date, wage). It aggregates all wages of the days of the same week, from dailywage table and save the result in wage field. Therefore every time we update our dailywage table we need to update weeklywage table too!
+The Last Model in our system,It has three fields (courier, saturday_date, wage). It aggregates all wages of the days of the same week, from dailywage table and save the result in wage field. Therefore every time we update our dailywage table we need to update weeklywage table too. The last important thing that we shoud consider is that courier and saturday fields are constraint, so we can't have two rows in the table which are in the same week and are for a same courier!
+
+
+# WorkFlow
+# HOW TO UPDATE DAILYWAGE TABLE?
+Users only have access to make new "Income-Models"(which were Trip or WageIncrement or WageReduction). after they created one instance from one of these three 
+models, next step is to check if we have a related dailywage record or not, if we didn't have any dailywage record which had the same courier as our instance.courier and same date as our instance.date, we would create such a daily record with these properties and save it, and if we had a dailywage record which had the same courier as our instance.courier and same date as our instance.date, we update this instance.wage and save it. All three "Income-Models" have methods to perform this action after there were made a new instance from them.
+
+# HOW TO UPDATE WEEKYWAGE TABLE?
+Whenever we update DailyWage, we have to update the DailyWage table too, that is why there is a method inside DailyWage model and if after making a new DailyWge instance, we call it, it would check all the week changes in the same week as DailyWage new insatnce's week and updates WeeklyWage.
+
+
