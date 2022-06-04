@@ -42,4 +42,5 @@ models, next step is to check if we have a related dailywage record or not, if w
 # HOW TO UPDATE WEEKYWAGE TABLE?
 Whenever we update DailyWage, we have to update the DailyWage table too, that is why there is a method inside DailyWage model and if after making a new DailyWge instance, we call it, it would check all the week changes in the same week as DailyWage new insatnce's week and updates WeeklyWage.
 
-
+# Saving_flowmanager, Serializers, Viesets and ......
+I would continue to make this documention more complete...
