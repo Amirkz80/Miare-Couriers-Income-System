@@ -55,16 +55,22 @@ def saving_flow_manager(income_obj) -> bool:
 
 
 class CustomViewSet1(ListModelMixin ,RetrieveModelMixin, CreateModelMixin, GenericViewSet):
-    # A customViewSet, which other ViewSets inherit from,
-    # This one can do the followings:
-    # 1-Gets all instances 2-Gets one insatnce 3-Creates a new instance
+    """
+    A customViewSet, which other ViewSets inherit from,
+    This one can do the followings:
+    1-Gets all instances 2-Gets one insatnce 3-Creates a new instance
+    """
+
     pass
 
 
 class CustomViewSet2(ListModelMixin ,RetrieveModelMixin, GenericViewSet):
-    # A customViewSet, which DailyWageViewSet inherit from,
-    # This one can do the followings:
-    # 1-Gets all instances 2-Gets one insatnce
+    """
+    A customViewSet, which DailyWageViewSet inherit from,
+    This one can do the followings:
+    1-Gets all instances 2-Gets one insatnce
+    """
+    
     pass
 
 
