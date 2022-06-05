@@ -1,25 +1,33 @@
-from rest_framework.mixins import (ListModelMixin, RetrieveModelMixin, CreateModelMixin)
 from rest_framework.viewsets import GenericViewSet
 from rest_framework.settings import api_settings
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
+from rest_framework.mixins import (
+    ListModelMixin,
+    RetrieveModelMixin,
+    CreateModelMixin
+)
 
 from django.db import transaction
-from .models import (Courier,
-                     Trip,
-                     WageReduction,
-                     WageIncrement,
-                     DailyWage,
-                     WeeklyWage)
+from .models import (
+    Courier,
+    Trip,
+    WageReduction,
+    WageIncrement,
+    DailyWage,
+    WeeklyWage
+)
 
-from .serializers import (CourierSerializer,
-                          TripSerializer,
-                          WageReductionSerializer,
-                          WageIncrementSerializer,
-                          DailyWageSerializer, 
-                          WeeklyWageSerializer, 
-                          DateRangeSerializer)
+from .serializers import (
+    CourierSerializer,
+    TripSerializer,
+    WageReductionSerializer,
+    WageIncrementSerializer,
+    DailyWageSerializer, 
+    WeeklyWageSerializer, 
+    DateRangeSerializer
+)
 
 
 def saving_flow_manager(income_obj) -> bool:
