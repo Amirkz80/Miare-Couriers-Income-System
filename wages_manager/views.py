@@ -47,7 +47,7 @@ def saving_flow_manager(income_obj) -> bool:
             new_dailywage = income_obj.update_dailywage()
             new_dailywage.update_weeklywage()
     except:
-        # DB changes have been ignored, sending a flag to handle the exception
+        # DB changes have been rollbacked, sending a flag to handle the exception
         return False
 
     # All savings are commmited successfully
@@ -70,7 +70,7 @@ class CustomViewSet2(ListModelMixin ,RetrieveModelMixin, GenericViewSet):
     This one can do the followings:
     1-Gets all instances 2-Gets one insatnce
     """
-    
+
     pass
 
 
