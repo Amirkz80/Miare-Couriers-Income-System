@@ -1,12 +1,13 @@
-# The application model part, consists of 6 models.
-# A Courier which is a foreign key for all other models,
-# Then we have Trip, WageRedcution and WageIncrement,
-# These three models can affect total income of a courier.
-# Therefore we would sometimes,
-# call them 'Income-models' in here and other sections.
-# And at last but not least we have Dailywage and WeeklyWage table
-# These two tables will be updated each time an Income-model changes.
-
+"""
+The application model part, consists of 6 models.
+A Courier which is a foreign key for all other models,
+Then we have Trip, WageRedcution and WageIncrement,
+These three models can affect total income of a courier.
+Therefore we would sometimes,
+call them 'Income-models' in here and other sections.
+And at last but not least we have Dailywage and WeeklyWage table
+These two tables will be updated each time an Income-model changes.
+"""
 
 from django.db import models
 from datetime import timedelta, date
