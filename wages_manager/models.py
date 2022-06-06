@@ -9,8 +9,8 @@ And at last but not least we have Dailywage and WeeklyWage table
 These two tables will be updated each time an Income-model changes.
 """
 
-from django.db import models
 from datetime import timedelta, date
+from django.db import models
 
 
 class Courier(models.Model):
