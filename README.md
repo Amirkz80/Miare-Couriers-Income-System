@@ -2,14 +2,19 @@
 This Projects Stores and Updates dynamic data about the daily and weekly income of a Miare Courier. 
 
 # Structure and Models
-There are 6 models that represent different entities in the system,
-Im going to describe these entities and their connection. 
+There are 6 models that represent different entities in the system:
+1. Courier Model
+2. Trip Model
+3. WageReduction Model
+4. WageIncremnt Model
+5. DailyWage Model
+6. WeeklyWage Model
 
 ## Courier Model
 We represent couriers with a model called "Courier".
 This Model only has one filed (name) and acts as a foreign key for all other tables.
 
-## _Income-Model_
+## **_Income-Model_**
 There are three factors that would have direct impact on daily and weekly income that a courier has.
 We represent them as 3 seprate models and informally call them "Income-Models", because they can change courier's income :
 
