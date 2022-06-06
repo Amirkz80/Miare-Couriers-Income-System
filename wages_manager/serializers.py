@@ -1,10 +1,13 @@
 from rest_framework import serializers
-from .models import (Courier,
-                     Trip,
-                     WageReduction,
-                     WageIncrement,
-                     DailyWage,
-                     WeeklyWage)
+
+from .models import ( 
+    Courier,
+    Trip,
+    WageReduction,
+    WageIncrement,
+    DailyWage,
+    WeeklyWage
+)
 
 
 class CourierSerializer(serializers.ModelSerializer):
