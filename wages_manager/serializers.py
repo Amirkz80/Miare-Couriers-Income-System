@@ -1,3 +1,11 @@
+"""
+In this section we serialize all model classe
+by using model serializers.
+DateRangerSerializer is used to get date range
+parameters as inputs from API user.
+"""
+
+
 from rest_framework import serializers
 
 from .models import ( 
