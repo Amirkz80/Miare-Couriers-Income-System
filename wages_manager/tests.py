@@ -1,6 +1,5 @@
 from django.test import TestCase
 from wages_manager.models import *
-from datetime import date
 
 class TripTestCase(TestCase):
     """A class to test functionality of Trip class"""
